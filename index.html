@@ -164,14 +164,35 @@ chart.appear(1000, 100);
 
 }); // end am5.ready()
 }
-ShowGraph();
+//ShowGraph();
+
+function buttonClick(value) {
+  
+  value = value.replaceAll('\'', '')
+  
+  value = value.split(',');
+  
+  let out = [];
+  
+  value.forEach(item => {
+    
+    out.push(Number(item));
+    
+  });
+  
+  dt = out;
+  
+  ShowGraph();
+  
+}
 
 </script>
 
 <!-- HTML -->
 <div id="chartdiv"></div>
 
-
+<textarea></textarea>
+<button onclick="buttonClick(this.previousElementSibling.value)">Render graph</button>
 
 <body>
 
