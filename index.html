@@ -94,7 +94,7 @@ function generateDatas(count) {
 
 // Create axes
 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+/*var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
   maxDeviation: 0.5,
   baseInterval: {
     timeUnit: "day",
@@ -104,7 +104,10 @@ var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
   pan:"zoom"
 }),
   tooltip: am5.Tooltip.new(root, {})
-}));
+}));*/
+
+
+var xAxis = chart.xAxes.push(am5xy.
 
 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
   maxDeviation:1,
