@@ -63,7 +63,7 @@ var date = new Date();
 date.setHours(0, 0, 0, 0);
 var value = 100;
 
-function generateData(value_) {
+function generateData() {
   value = Math.round((Math.random() * 10 - 5) + value);
   am5.time.add(date, "day", 1);
   return {
@@ -73,26 +73,10 @@ function generateData(value_) {
 }
 
 function generateDatas(count) {
-  
   var data = [];
-  let vlues = [0.1,0.2,0.3,0.4,0.5,0.6];
-  
   for (var i = 0; i < count; ++i) {
-    data.push( generateData() );
+    data.push(generateData());
   }
-  /*
-  let data = [
-  1,2,3,4];
-  
-  data.forEach((d,i)=>{
-    date.setHours(0, 0, 0, 0);
-    am5.time.add(date, "day", 1);
-    
-    let el = {date:date.getTime(), value: d};
-    data.push(el);
-
-    console.log(d,i);
-  });*/
   return data;
 }
 
@@ -111,8 +95,6 @@ var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
   tooltip: am5.Tooltip.new(root, {})
 }));
 
-
-
 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
   maxDeviation:1,
   renderer: am5xy.AxisRendererY.new(root, {
@@ -128,7 +110,7 @@ var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
   xAxis: xAxis,
   yAxis: yAxis,
   valueYField: "value",
-  valueXField: "time",
+  valueXField: "date",
   tooltip: am5.Tooltip.new(root, {
     labelText: "{valueY}"
   })
@@ -159,7 +141,7 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
 }));
 
 
-var data = generateDatas(5);
+var data = generateDatas(50);
 series.data.setAll(data);
 
 
