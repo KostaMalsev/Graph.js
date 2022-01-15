@@ -74,7 +74,7 @@ function generateData(vl) {
 
 function generateDatas(count) {
   var data = [];
-  let dt = [1,2,3,4,5,6,7,8,9,10,11,12]
+  let dt = [1,2,3,4,5,6,7,8,9,10,11,12];
   for (var i = 0; i < count; ++i) {
     data.push(generateData(dt[i]));
   }
@@ -142,7 +142,7 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
 }));
 
 
-var data = generateDatas(50);
+var data = generateDatas(12);//50
 series.data.setAll(data);
 
 
