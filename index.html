@@ -80,9 +80,14 @@ function generateDatas(count) {
     data.push(generateData());
   }*/
   
-  let data = [
+  let data1 = [
   1,2,3,4    
   ];
+  let data=[];
+  data1.forEach((d,i)=>{
+    let el = {time:i, value: d};
+    data.push(el);
+  });
   return data;
   
 }
