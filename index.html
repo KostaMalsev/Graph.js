@@ -84,11 +84,12 @@ function generateDatas(count) {
   1,2,3,4];
   
   data.forEach((d,i)=>{
-    data.push(el);
     date.setHours(0, 0, 0, 0);
     am5.time.add(date, "day", 1);
     
     let el = {date:date.getTime(), value: d};
+        data.push(el);
+
     console.log(d,i);
   });
   return data;
