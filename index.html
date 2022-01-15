@@ -32,6 +32,7 @@ textarea {
     font-family: system-ui;
     font-size: 16px;
     padding: 11px;
+    line-height: 1.5;
 }
 
 button {
@@ -239,7 +240,7 @@ function buttonClick(value) {
 <div id="chartdiv"></div>
 
 <div class="wrapper">
-  <textarea placeholder="Type some comma-seperated points..."></textarea>
+  <textarea placeholder="Type comma-seperated points..."></textarea>
   <button onclick="buttonClick(this.previousElementSibling.value)">Render graph</button>
 </div>
 
