@@ -77,14 +77,14 @@ function generateDatas(count) {
   /*
   var data = [];
   for (var i = 0; i < count; ++i) {
-    data.push(generateData());
+    data.  push(generateData());
   }*/
   
   let data = [
   1,2,3,4];
   
   data.forEach((d,i)=>{
-    let el = {date:i, value: d};
+    let el = {time:i, value: d};
     console.log(d,i);
     data.push(el);
   });
@@ -121,7 +121,7 @@ var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
   xAxis: xAxis,
   yAxis: yAxis,
   valueYField: "value",
-  valueXField: "date",
+  valueXField: "time",
   tooltip: am5.Tooltip.new(root, {
     labelText: "{valueY}"
   })
